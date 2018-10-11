@@ -2,3 +2,4 @@ Flask
 Flask-RESTFul
 Flask-SQLAlchemy
 uwsgi
+psycopg2
