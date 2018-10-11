@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Place Order REST API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+</head>
+<body>
+    <p class="title"><b>Place Order REST API</b></p>
+
+    <p class="endp">Endpoints:</p>
+
+    <ul>
+        <li>GET /orders - Returns the list of all orders.</li>
+        <li>GET /order/order_number - Returns a specific order.</li>
+        <li>POST /order/order_number - Add an order by the order number.</li>
+        <li>PUT /order/order_number - Add or Update an order by the order number.</li>
+        <li>DELETE /order/order_number - Delete an order by the order number.</li>
+      </ul>
+</body>
+</html>
