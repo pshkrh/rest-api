@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 from flask_restful import Resource, Api
+from resources.item import Item, ItemList
 from resources.order import Order, OrderList
 from resources.home import Home
 
@@ -10,6 +11,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 api = Api(app)
 
+api.add_resource(Item, '/item/<string:product_code>')
+api.add_resource(ItemList, '/items')
 api.add_resource(Order, '/order/<string:order_no>')
 api.add_resource(OrderList, '/orders')
 api.add_resource(Home, '/')
